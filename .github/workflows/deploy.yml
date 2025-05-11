@@ -38,7 +38,7 @@ jobs:
           overwrite: true
 
       - name: Run deployment commands on EC2
-        uses: appleboy/ssh-action@v1.0.3
+        uses: appleboy/ssh-action@master
         with:
           host: 23.22.231.0
           username: ubuntu
