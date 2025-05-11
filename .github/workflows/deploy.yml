@@ -33,7 +33,7 @@ jobs:
           username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           source: "."
-          target: "/home/ubuntu/nextjs-app"
+          target: "/home/ubuntu/${{ secrets.FOLDER_NAME }}"
           rm: true
           strip_components: 1
           overwrite: true
@@ -45,7 +45,7 @@ jobs:
           username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /home/ubuntu/nextjs-app
+            cd /home/ubuntu/${{ secrets.FOLDER_NAME }}
             npm install --production
 
             # Ensure PM2 is installed
