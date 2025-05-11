@@ -30,7 +30,7 @@ jobs:
         with:
           host: 34.236.154.199
           username: ubuntu
-          key: -----BEGIN OPENSSH PRIVATE KEY-----b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZWQyNTUxOQAAACAtlALeMTMb6IMekOTPmY3eT3xJjCFm70aIMVaMWyZYHwAAAKDw1Ej88NRI/AAAAAtzc2gtZWQyNTUxOQAAACAtlALeMTMb6IMekOTPmY3eT3xJjCFm70aIMVaMWyZYHwAAAEB2VwmLQiCkm1su6wLSbBVvfPfgtK1XwHqehgbI7DsreS2UAt4xMxvogx6Q5M+Zjd5PfEmMIWbvRogxVoxbJlgfAAAAFnVidW50dUBpcC0xNzItMzEtMzEtNzABAgMEBQYH-----END OPENSSH PRIVATE KEY-----
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
           source: "."
           target: "/home/ubuntu/nextjs-app"
           rm: true
@@ -42,7 +42,7 @@ jobs:
         with:
           host: 34.236.154.199
           username: ubuntu
-          key: -----BEGIN OPENSSH PRIVATE KEY-----b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZWQyNTUxOQAAACAtlALeMTMb6IMekOTPmY3eT3xJjCFm70aIMVaMWyZYHwAAAKDw1Ej88NRI/AAAAAtzc2gtZWQyNTUxOQAAACAtlALeMTMb6IMekOTPmY3eT3xJjCFm70aIMVaMWyZYHwAAAEB2VwmLQiCkm1su6wLSbBVvfPfgtK1XwHqehgbI7DsreS2UAt4xMxvogx6Q5M+Zjd5PfEmMIWbvRogxVoxbJlgfAAAAFnVidW50dUBpcC0xNzItMzEtMzEtNzABAgMEBQYH-----END OPENSSH PRIVATE KEY-----
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd /home/ubuntu/nextjs-app
             npm install --production
